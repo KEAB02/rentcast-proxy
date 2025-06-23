@@ -14,7 +14,7 @@ app.get('/api/property', async (req, res) => {
   const fullAddress = `${address}, ${city}, ${state} ${zip}`;
 
   try {
-    const response = await fetch(`<https://api.rentcast.io/v1/properties?address=${encodeURIComponent(fullAddress)}`,> {
+    const response = await fetch(`https://api.rentcast.io/v1/properties?address=${encodeURIComponent(fullAddress)}`, {
       headers: {
         'X-Api-Key': RENTCAST_API_KEY
       }
